@@ -23,3 +23,4 @@ Any issue with `consol` should be reported on [GitHub](https://github.com/moknah
 
 ## Running `consol` on Windows
 Will need to have `Git` instead on your Windows machine to be able to run this via `bash`
+Follow this: https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/ to install the Git on the machine
