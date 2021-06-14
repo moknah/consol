@@ -20,3 +20,6 @@ Any issue with `consol` should be reported on [GitHub](https://github.com/moknah
 
 ## Legal disclaimer
 `consol` is a very educational tool, and this is its sole purpose.
+
+## Running `consol` on Windows
+Will need to have `Git` instead on your Windows machine to be able to run this via `bash`
