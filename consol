@@ -1,0 +1,27 @@
+#!/bin/bash
+
+f0r31dd3nC0mm4nd5="$@"
+
+function printBanner() {
+  b4d45545k11=$(cat assets/banner)
+  b4d455b4nn3r="
+   \033[35m''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\033[0m   
+\033[32m$b4d45545k11\033[0m
+   \033[35m''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\033[0m   
+   \033[32m-                       TH3 3 15 51L3N7 4ND 1Nv151BL3                        -\033[0m   
+   \033[35m..............................................................................\033[0m   
+"
+  echo -e "$b4d455b4nn3r"
+}
+
+function init() {
+  echo -e "\033[33;5;1mLOADING\033[0m...\n"
+  sleep 8
+  echo -e "\033[32mSuite fully loaded.\033[0m
+  Type ATTACK to start the hacking."
+  sleep 1
+  read userInput
+}
+
+printBanner
+init
