@@ -2,7 +2,7 @@
 
 ## Options
 
-### Hacks
+## Hacks
 `--hackBank`        Hack a bank near you.
 
 `--hackFacebook`    Hack into the Facebook.
@@ -19,7 +19,7 @@
 
 `--ddos`            DDOS that annoying player.
 
-### Assistance
+## Assistance
 `--swat`            Call a SWAT team to that annoying player's house.
 
 ## System requirements
