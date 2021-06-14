@@ -10,7 +10,10 @@ processes=[
   "Packets burned by firewall... Deploying SoFas instead...",
   "GENERATING GUI IN JAVASCRIPT TO TRACK IP!",
   "Injecting assembly registry into segmentation",
-  "Reconstituting file integrity...",
+  "Reconstituting file integrity..."
+]
+
+assistance=[
   "Calling local SWAT team...",
   "Informing the Pentagon of a Russian hacker playing COD on the opposite team..."
 ]
