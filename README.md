@@ -12,7 +12,7 @@
 
 
 ## System requirements
-`consol` needs to be run from bash or zsh. It hasn't yet been tested in other similar shells.
+`consol` needs to be run from Kali Linux. This is the operating system that hackers use.
 
 ## Issues
 Any issue with `consol` should be reported on [GitHub](https://github.com/moknah/consol/issues).
