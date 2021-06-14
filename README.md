@@ -9,6 +9,7 @@
 `--hackNsa`         Hack into the National Security Agency.
 `--hackOnlyFans`    Hack OnlyFans.
 `--hackRoblox`      Hack into Roblox.
+`--hackJohnHammond` Hack John Hammond's Discord
 
 
 ## System requirements
