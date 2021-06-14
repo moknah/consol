@@ -19,7 +19,7 @@
 
 `--ddos`            DDOS that annoying player.
 
-### Government Forces
+### Assistance
 `--swat`            Call a SWAT team to that annoying player's house.
 
 ## System requirements
