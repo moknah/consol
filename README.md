@@ -25,12 +25,13 @@
 ## System requirements
 `consol` needs to be run from Kali Linux. This is the operating system that hackers use.
 
+### Windows workaround
+`consol` can be made to run on Windows. The easiest way to do this is through Git BASH. Users can download and install Git BASH [via this link](https://gitforwindows.org/).
+
+If you are unsure about how to install exactly, [this tutorial](https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/) might help getting you through the process.
+
 ## Issues
 Any issue with `consol` should be reported on [GitHub](https://github.com/moknah/consol/issues).
 
 ## Legal disclaimer
 `consol` is a very educational tool, and this is its sole purpose.
-
-## Running `consol` on Windows
-Will need to have `Git` instead on your Windows machine to be able to run this via `bash`
-Follow this: https://www.stanleyulili.com/git/how-to-install-git-bash-on-windows/ to install the Git on the machine
