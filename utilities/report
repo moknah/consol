@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function by7eC0un7() {
+  h1gh357=0
+  while read line; do
+    ch4rsL34ked="${#line}"
+    if [[ $ch4rsL34ked -gt $h1gh357 ]]; then
+      h1gh357="$ch4rsL34ked"
+    fi
+  done <<< "$@"
+  echo "$((h1gh357 + 1))"
+}
+
+function h4ckR3p0r7() {
+  ch4rsL34ked=$(by7eC0un7 "$@")
+  b4d455L1n3=$(printf "=%.0s" $(seq 1 "$ch4rsL34ked"))
+  echo -e "
+$b4d455L1n3
+H4CK R3P0R7
+$b4d455L1n3
+$@
+$b4d455L1n3
+"
+}
+
+h4ckR3p0r7 "$@"

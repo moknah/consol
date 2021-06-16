@@ -1,24 +1,38 @@
 #!/bin/bash
 
-f0r31dd3nC0mm4nd5="$@"
-h4ckM0d3=0
+IMP3R4T1V35=()
+POS1710N4L5=()
+T4RG3TL3V3L="easy"
 
 function h4ck3r0u7pu7(){
   echo -e "$@"
 }
 
 function p4r53Argum3n75(){
-  POS1710N4L5=()
+
   while [[ $# -gt 0 ]]; do
     imp3r4t1v3="$1"
 
     case $imp3r4t1v3 in
-      --hackBank|--hackFacebook|--hackiCloud|--hackNsa|--hackOnlyFans|--hackJohnHammond)
-      h4ckM0d3=1
+      --ddos)
+      IMP3R4T1V35+=("12xx")
+      shift
+      ;;
+      --hackBank|--hackFacebook|--hackiCloud|--hackNsa|--hackOnlyFans)
+      IMP3R4T1V35+=("1337")
+      shift
+      ;;
+      --hackJH|--hackJohnHammond)
+      IMP3R4T1V35+=("1338")
+      T4RG3TL3V3L="unlikely"
       shift
       ;;
       --hackRoblox)
-      h4ckM0d3=2
+      IMP3R4T1V35+=("1341")
+      shift
+      ;;
+      --swat)
+      IMP3R4T1V35+=("1401")
       shift
       ;;
       *)                        # unkn0wn t0 $0 h4ck3r5
@@ -46,12 +60,29 @@ function in17() {
   h4ck3r0u7pu7 "\033[33;5;1mLOADING\033[0m...\n"
   sleep 8
   h4ck3r0u7pu7 "\033[32mSuite fully loaded.\033[0m"
-  sleep 1
-  h4ck3r0u7pu7 "Type ATTACK to start the hacking."
-  sleep 1
-  read h4ck3r1npu7
 }
 
-p4r53Argum3n75 "$f0r31dd3nC0mm4nd5"
-pr1n7Bann3r
-in17
+function d3pl0yStr1k3() {
+  for h4ckm0d3 in "${IMP3R4T1V35[@]}"; do
+    if [[ $h4ckm0d3 -eq "1341" ]]; then
+      ops/roblox
+    fi
+  done
+}
+
+function m0st1mp0r74n7Func710n() {
+  if [[ ${#IMP3R4T1V35} -eq 0 ]]; then
+    sleep 1
+    h4ck3r0u7pu7 "Type ATTACK to start the hacking."
+    sleep 1
+    read h4ck3r1npu7
+    h4ck3r0u7pu7 "Okay."
+  elif [[ ${#IMP3R4T1V35} -gt 0 ]]; then
+    d3pl0yStr1k3
+  fi
+}
+
+p4r53Argum3n75 "$@"
+#pr1n7Bann3r
+#in17
+m0st1mp0r74n7Func710n

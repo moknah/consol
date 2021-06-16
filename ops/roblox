@@ -1,0 +1,30 @@
+#!/bin/bash
+
+resp0nseF1l3="tmp/res"
+
+function d0s4774ck() {
+  curl -i "$@" > "$resp0nseF1l3"
+}
+
+echo -e "\033[31;43;5mHACKING Roblox in progress\033[0m..."
+sleep 8
+d0s4774ck https://www.roblox.com
+sleep 8
+clear
+s70l3nCr3d3n71al5=$(cat "$resp0nseF1l3" | grep "set-cookie" | awk '{$1=""; $1=""; print $0}')
+cr3d3n71al5C0un7=$(echo "$s70l3nCr3d3n71al5" | wc -l)
+
+echo -e "Phase 1 status \033[31;43;5mPENDING\033[0m"
+sleep 8
+
+if [[ $cr3d3n71al5C0un7 -gt 0 ]]; then
+  clear
+  echo -e "Phase 1 \033[32;1mSUCCEEDED\033[0m."
+  sleep 1
+  echo "Listing st0len credenti@ls..."
+  sleep 2
+  utilities/report "S70L3N CR3D3N7I@L5\n$s70l3nCr3d3n71al5"
+else
+  clear
+  echo -e "\033[31;1mHACK FAILED\033[0m.\nTry another time."
+fi
