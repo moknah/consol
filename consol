@@ -65,7 +65,9 @@ function in17() {
 function d3pl0yStr1k3() {
   for h4ckm0d3 in "${IMP3R4T1V35[@]}"; do
     if [[ $h4ckm0d3 -eq "1341" ]]; then
+      clear
       ops/roblox
+      utilities/authentication
     fi
   done
 }
