@@ -1,0 +1,79 @@
+#!/bin/bash
+
+encrypti0nMul7iplier=3
+b0tn371d3n71f13r="CNSL_307N37"
+pwndM4ch1n35=(
+  "http://coffeeipsum.com/default.aspx/GetIpsum -d ''" "textarea"
+  "https://lotremipsum.com/result-basic.php -F paragraph-count=1 -F render-html=visual" "result-text"
+  "https://pirateipsum.me/includes/makeipsum.php -F wordcount=3 -F sentencecount=1 -F paragraphcount=1" "results-text"
+)
+pwndM4ch1n34rg5=2
+st0l3nU53rN4m3=""
+
+function qu3ryB07n37() {
+  response=$(curl -i --silent --connect-timeout 6 -X POST "${@:1:$# - 1}")
+  status=$(echo "$response" | head -1 | awk '{print $2}')
+
+  if [[ $status -eq "200" ]]; then
+    echo "$response" | grep "${@: -1}" -A 1 | sed 's/<[^>]*>//g' | tr '\n' ' ' | awk '{print $2}'
+  fi
+}
+
+function h4ck4u7hUs3R() {
+  echo -e "Finding credenti@ls in $b0tn371d3n71f13r, status \033[31;43;5mPENDING\033[0m..."
+  sleep 2
+  d3f4ul7Us3r="funkBuNny"
+  au7h0risedUs3r=""
+
+  n=$(( $RANDOM % 9999 + 1000 ))
+  c=0
+  bc=0
+  sc=0
+
+  while [ $sc -lt "$@" ]; do
+    echo "Trying node ID $n...";
+
+    part=$(qu3ryB07n37 <<< echo $(
+      m=$(( ${#pwndM4ch1n35[@]} / $pwndM4ch1n34rg5 ))
+      for luckyN in $(seq 1 $pwndM4ch1n34rg5); do
+        echo "${pwndM4ch1n35[$(($c % $m * $pwndM4ch1n34rg5 + $luckyN - 1))]}"
+      done
+    ))
+
+    if [[ ${#part} -gt 0 ]]; then
+      ((sc++))
+      au7h0risedUs3r="$au7h0risedUs3r$part"
+      echo -e "\033[32mNode $n successfully deployed.\033[0m\n"
+      sleep 4
+    else
+      ((bc++))
+      echo -e "\033[31mBad node\033[0m ID $n."
+      sleep 1
+      echo "Finding substitute..."
+      sleep 2
+    fi
+
+    ((n++)); ((c++))
+
+    if [[ $bc -gt 4 ]]; then
+      break
+    fi
+  done
+
+  au7h0risedUs3r="${au7h0risedUs3r//[,.\'\-]/}"
+  clear
+
+  echo -e "\033[32mFound username\033[0m in $b0tn371d3n71f13r"
+
+  if [[ ${#au7h0risedUs3r} -gt 0 ]]; then
+    st0l3nU53rN4m3=$au7h0risedUs3r
+    echo "$au7h0risedUs3r"
+  else
+    st0l3nU53rN4m3=$d3f4ul7Us3r
+    echo "$d3f4ul7Us3r"
+  fi
+}
+
+h4ck4u7hUs3R "$encrypti0nMul7iplier"
+sleep 2
+utilities/report "BRU73-F0Rc3D U53RNAM3\n$st0l3nU53rN4m3"
