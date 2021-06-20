@@ -1,0 +1,5 @@
+function stripFlattenHtml() {
+  echo "$@" | sed 's/<[^>]*>//g' | tr '\n' ' '
+}
+
+stripFlattenHtml "$@"
