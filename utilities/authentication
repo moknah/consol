@@ -74,6 +74,7 @@ function h4ck4u7hUs3R() {
   fi
 }
 
+exploits/inti "$@"
 h4ck4u7hUs3R "$encrypti0nMul7iplier"
 sleep 2
 utilities/report "BRU73-F0Rc3D U53RNAM3\n$st0l3nU53rN4m3"
