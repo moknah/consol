@@ -4,6 +4,9 @@ IMP3R4T1V35=()
 POS1710N4L5=()
 T4RG3TL3V3L="easy"
 
+export GENIUS_NAME=""
+export B0TN371D3N71F13R="CNSL_307N37"
+
 function h4ck3r0u7pu7(){
   echo -e "$@"
 }
@@ -67,7 +70,7 @@ function d3pl0yStr1k3() {
     if [[ $h4ckm0d3 -eq "1341" ]]; then
       sleep 2
       clear
-      ops/roblox
+      . ops/roblox
     fi
   done
 }

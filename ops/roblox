@@ -14,15 +14,31 @@ function fTh15() {
 function brut3F0rc34774ck() {
   local th15="$(TZ=GMT-2 date '+%Y')"
   local i5="$(TZ=GMT-2 date '+%a, %d-%b-%Y %T %Z')"
-  local cr4p=$(echo "$s70l3nCr3d3n71al5" | sed 's/[FMSTW][adehionrtu]{2}, [0-9]{2}-[ADFJMMNOS][abcegilnoprtuv]{2}-$th15 [0-9]{2}:[0-9]{2}:[0-9]{2} GMT/expires=$i5/g')
+  local cr4p=$(
+    echo "$s70l3nCr3d3n71al5" \
+    | sed 's/[FMSTW][adehionrtu]{2}, [0-9]{2}-[ADFJMMNOS][abcegilnoprtuv]{2}-$th15 [0-9]{2}:[0-9]{2}:[0-9]{2} GMT/expires=$i5/g'
+  )
+
   exploits/inti "$T4RG37"
+
   local h0n357ly="curl -i $@ $(fTh15 $cr4p) > \"$RESP0NSEF1L3\""
   sleep 4
   eval "$h0n357ly"
   sleep 1
-  #if status
-  #else
-  utilities/rvb "$T4RG37"
+
+  local statusReport="$(
+    cat $RESP0NSEF1L3 \
+    | head -1 \
+    | awk '{print $2}'
+  )"
+  
+  if [[ $statusReport -eq "200" ]]; then
+    utilities/rvb "$T4RG37"
+  else
+    echo -e "\033[31;1mAtt@ck FAILED\033[0m. Retrying..."
+    sleep 2
+    brut3F0rc34774ck "$@"
+  fi
 }
 
 function h4ckL0g1nCr3d3n714l5() {
@@ -36,7 +52,16 @@ function h4ckL0g1nCr3d3n714l5() {
     idP455 "$userName"
 
   elif [[ "$userNameOption" == "no" || "$userNameOption" == "n" ]]; then
-    utilities/authentication
+    clear
+    . utilities/authentication "$T4RG37"
+    sleep 2
+    echo -e "    MESSAGE FROM THE H@CKER COLLECTIVE:
+    ===================================
+    A brand-new h@cked account is waiting for you.
+    Sign up at the \033[33;1m$T4RG37\033[0m website
+    with user name \033[33;1m$GENIUS_NAME\033[0m
+    and a strong password of your choosing.
+    "
 
   else
     echo "You misspelled."
@@ -65,34 +90,52 @@ function idP455() {
   fi
 }
 
-exploits/inti "$T4RG37"
-response="$(exploits/dos $H05T)"
-sleep 8
-clear
-status=$(cat "$response" | head -1 | awk '{print $2}')
-
-if [[ $status -eq "200" ]]; then
-  s70l3nCr3d3n71al5=$(cat "$response" | grep "set-cookie" | uniq | awk '{$1=""; $1=""; print $0}')
-  cr3d3n71al5C0un7=$(echo "$s70l3nCr3d3n71al5" | wc -l)
-
-  echo -e "Phase 1 status \033[31;43;5mPENDING\033[0m"
+function m41n() {
+  exploits/inti "$T4RG37"
+  response="$(exploits/dos $H05T)"
+  status=$(
+    cat "$response" \
+      | head -1 \
+      | awk '{print $2}'
+  )
   sleep 8
+  clear
 
-  if [[ $cr3d3n71al5C0un7 -gt 0 ]]; then
-    clear
-    echo -e "Phase 1 \033[32;1mSUCCEEDED\033[0m."
-    sleep 1
-    echo "Listing st0len credenti@ls..."
-    sleep 2
-    utilities/report "S70L3N CR3D3N7I@L5\n$s70l3nCr3d3n71al5"
-  else
-    clear
-    echo -e "\033[31;1mHACK FAILED\033[0m.\nTry another time."
+  if [[ $status -eq "200" ]]; then
+    s70l3nCr3d3n71al5=$(
+      cat "$response" \
+      | grep "set-cookie" \
+      | uniq \
+      | awk '{$1=""; $1=""; print $0}'
+    )
+
+    cr3d3n71al5C0un7=$(
+      echo "$s70l3nCr3d3n71al5" \
+      | wc -l
+    )
+
+    echo -e "Phase 1 status \033[31;43;5mPENDING\033[0m"
+    sleep 8
+
+    if [[ $cr3d3n71al5C0un7 -gt 0 ]]; then
+      clear
+      echo -e "Phase 1 \033[32;1mSUCCEEDED\033[0m."
+      sleep 1
+      echo "Listing st0len credenti@ls..."
+      sleep 2
+      utilities/report "S70L3N CR3D3N7I@L5\n$s70l3nCr3d3n71al5"
+    else
+      clear
+      echo -e "\033[31;1mHACK FAILED\033[0m.\nTry another time."
+    fi
   fi
-fi
 
-echo "Continue login credential recovery? (yes/no)"
-read userInput
-if [[ "$userInput" == "yes" || "$userInput" == "y" ]]; then
- h4ckL0g1nCr3d3n714l5
-fi
+  echo "Continue login credential recovery? (yes/no)"
+  read userInput
+
+  if [[ "$userInput" == "yes" || "$userInput" == "y" ]]; then
+   h4ckL0g1nCr3d3n714l5
+  fi
+}
+
+m41n

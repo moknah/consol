@@ -1,11 +1,11 @@
 #!/bin/bash
 
 T4RG37="$@"
-fExt=$(echo "$T4RG37" | awk '{print tolower($0)}')
+F_EXT=$(echo "$T4RG37" | awk '{print tolower($0)}')
 
 function receiveTr4nsm1ss1on() {
   sleep 2
-  cat "source/messages.$fExt" | while read -r m; do
+  cat "source/messages.$F_EXT" | while read -r m; do
     echo -e "$T4RG37 IR responds:\n\033[33;1m$m\033[0m\n"
     sleep 8
     echo -e "Attempting to apply counter-measures...\n"
@@ -20,6 +20,7 @@ function ep1c() {
   sleep 2
   echo -e "\033[32mDecryption key recovered\033[0m. Showing message...\n"
   receiveTr4nsm1ss1on
+  clear
   echo -e "\033[32mHack successfully concluded\033[0m.\nOutcome: Next step: Contact $T4RG37 support.\n"
 }
 
