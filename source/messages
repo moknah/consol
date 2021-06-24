@@ -1,28 +1,28 @@
-methods=[
-  "Attempting military-grade NASA hex-granade multi-level padding shuffle multi-encryption CURL mode...",
-  "Shooting packets at firewall",
-  "Injecting XXS vulnerable server with buffer overflow tactics..."
-]
+METHODS=(
+  Attempting military-grade NASA hex-grenade multi-level padding shuffle multi-encryption CURL mode...
+  Shooting packets at firewall
+  Injecting XXS vulnerable server with buffer overflow tactics...
+)
 
-processes=[
-  "DECRYPTING FIREWALL!",
-  "Reverse tracing location... WARNING: Location scrambled!... GUI deployed... Commencing GUI attack...",
-  "Packets burned by firewall... Deploying SoFas instead...",
-  "GENERATING GUI IN JAVASCRIPT TO TRACK IP!",
-  "Injecting assembly registry into segmentation",
-  "Reconstituting file integrity..."
-]
+PROCESSES=(
+  DECRYPTING FIREWALL!"
+  Reverse tracing location... WARNING: Location scrambled!... GUI deployed... Commencing GUI attack...
+  Packets burned by firewall... Deploying SoFas instead...
+  GENERATING GUI IN JAVASCRIPT TO TRACK IP!
+  Injecting assembly registry into segmentation
+  Reconstituting file integrity...
+)
 
-assistance=[
-  "Calling local SWAT team...",
-  "Informing the Pentagon of a Russian hacker playing COD on the opposite team..."
-]
+ASSISTANCE=(
+  Calling local SWAT team...
+  Informing the Pentagon of a Russian hacker playing COD on the opposite team...
+)
 
-results=[
-  "Success!",
-  "Failure."
-]
+RESULTS=(
+  Success!
+  Failure.
+)
 
-misc=[
-  "Brace for intense hammering"
-]
+MISC=(
+  Brace for intense hammering
+)
