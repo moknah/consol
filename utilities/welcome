@@ -1,50 +1,5 @@
 #!/bin/bash
 
-output=""
-
-source ./source/LIB.thecaexee
-
-function h@ck3rW3lc0m3() {
-  echo "$@" | while read -n1 char; do
-    char="$(
-      echo "$char" \
-      | awk '{print toupper($0)}'
-    )"
-
-    the_ca_exee="_$char"
-
-    if [[ -z "${!the_ca_exee}" ]]; then
-      sleep .025
-
-      echo "$output" | while read -r line; do
-        line="$(echo "$line" | xxd -r -p)"
-        printf "%s\033[32;1m$line\033[0m"
-        sleep .175
-        printf "%s\n"
-      done
-
-      output=""
-
-    else
-      j=0
-      k=0
-      output="$(echo -e "${!the_ca_exee}" | while read -r line; do
-
-        echo "$output" | while read -r mine; do
-          if [[ $k -eq $j ]]; then
-            printf "%s$mine"
-          fi
-          (( k++ ))
-        done
-
-        echo "$line"
-        (( j++ ))
-      done)"
-
-    fi
-  done
-}
-
 function receiveTransmission() {
   echo -e "$1" | while IFS= read -n1 char; do
     printf "%s$2$char\033[0m"
@@ -67,7 +22,7 @@ if [[ -z $@ ]]; then
   echo "Welcome."
 else
   receiveTransmission "Welcome to the" "\033[33;1m"
-  h@ck3rW3lc0m3 "$@"
+  utilities/thecaexee "$@"
 fi
 
 monologue
