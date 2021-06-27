@@ -4,6 +4,8 @@ IMP3R4T1V35=()
 POS1710N4L5=()
 T4RG3TL3V3L="easy"
 
+M0D35=()
+
 export GENIUS_NAME=""
 export B0TN371D3N71F13R="CNSL_307N37"
 
@@ -42,6 +44,13 @@ function p4r53Argum3n75(){
       IMP3R4T1V35+=("1401")
       shift
       ;;
+      -a|--ascii)
+      M0D35+=("3001")
+      SK1P1N7R0=1
+      INPU7="$2"
+      shift
+      shift
+      ;;
       *)                        # unkn0wn t0 $0 h4ck3r5
       POS1710N4L5+=("$1")
       shift
@@ -49,6 +58,10 @@ function p4r53Argum3n75(){
     esac
   done
   set -- "${POS1710N4L5[@]}"
+
+  if [[ ${#IMP3R4T1V35} -gt 0 ]]; then
+    unset SK1P1N7R0
+  fi
 }
 
 function pr1n7Bann3r() {
@@ -99,7 +112,23 @@ function m0st1mp0r74n7Func710n() {
   fi
 }
 
+function actualM41n() {
+  for mode in "${M0D35[@]}"; do
+    if [[ $mode -eq "3001" ]]; then
+      utilities/thecaexee "$INPU7"
+    fi
+  done
+}
+
+function m41n() {
+  if [[ -z $SK1P1N7R0 ]]; then
+    pr1n7Bann3r
+    in17
+    m0st1mp0r74n7Func710n
+  else
+    actualM41n
+  fi
+}
+
 p4r53Argum3n75 "$@"
-pr1n7Bann3r
-in17
-m0st1mp0r74n7Func710n
+m41n
