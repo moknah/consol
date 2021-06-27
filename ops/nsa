@@ -1,0 +1,21 @@
+#!/bin/bash
+
+RESP0NSEF1L3="tmp/reu"
+T4RG37="NSA"
+H05T="https://www.nsa.gov"
+
+exploits/inti "$T4RG37"
+response="$(exploits/dos $H05T)"
+function m41n() {
+  response="tmp/res"
+  status="$(cat $response | head -1 | awk '{print $2}')"
+
+  if [[ $status -eq "200" ]]; then
+    title="$(cat $response | grep "<title>" -A 1 | utilities/stripHtml)"
+    sleep 2
+    clear
+    utilities/welcome "$title"
+  fi
+}
+
+m41n

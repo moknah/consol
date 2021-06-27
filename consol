@@ -21,7 +21,7 @@ function p4r53Argum3n75(){
       IMP3R4T1V35+=("12xx")
       shift
       ;;
-      --hackBank|--hackFacebook|--hackiCloud|--hackNsa|--hackOnlyFans)
+      --hackBank|--hackFacebook|--hackiCloud|--hackOnlyFans)
       IMP3R4T1V35+=("1337")
       shift
       ;;
@@ -32,6 +32,10 @@ function p4r53Argum3n75(){
       ;;
       --hackRoblox)
       IMP3R4T1V35+=("1341")
+      shift
+      ;;
+      --hackNsa)
+      IMP3R4T1V35+=("1342")
       shift
       ;;
       --swat)
@@ -71,6 +75,14 @@ function d3pl0yStr1k3() {
       sleep 2
       clear
       . ops/roblox
+    elif [[ $h4ckm0d3 -eq "1342" ]]; then
+      clear
+      pr1n7Bann3r
+      h4ck3r0u7pu7 "NSA h@ck detected."
+      h4ck3r0u7pu7 "\033[33;5;1mLOADING\033[0m advanced features..."
+      sleep 12
+      clear
+      . ops/nsa
     fi
   done
 }
