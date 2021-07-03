@@ -1,0 +1,68 @@
+#!/bin/bash
+
+output=""
+
+source ./source/LIB.thecaexef
+
+echo "$@" | while read -n1 char; do
+
+  if [[ $char == ":" ]]; then
+    char="CLN"
+  elif [[ $char == "," ]]; then
+    char="CMA"
+  elif [[ $char == "." ]]; then
+    char="DOT"
+  elif [[ $char == "-" ]]; then
+    char="DSH"
+  elif [[ $char == "=" ]]; then
+    char="EQU"
+  elif [[ $char == "!" ]]; then
+    char="EXC"
+  elif [[ $char == "+" ]]; then
+    char="PLS"
+  elif [[ $char == ";" ]]; then
+    char="SCL"
+  elif [[ $char == "'" ]]; then
+    char="SQT"
+  elif [[ $char == "_" ]]; then
+    char="USC"
+  elif [[ $char == "?" ]]; then
+    char="QUS"
+  elif [[ $char =~ ^[[:alnum:]]*$ ]]; then
+    char="$char"
+  else
+    char="NUC"
+  fi
+
+  the_ca_exef="_$char"
+
+  if [[ -z "${!the_ca_exef}" ]]; then
+    sleep .025
+
+    echo "$output" | while read -r line; do
+      line="$(echo "$line" | xxd -r -p)"
+      printf "%s\033[32;1m$line\033[0m"
+      sleep .175
+      printf "%s\n"
+    done
+
+    output=""
+
+  else
+    j=0
+    k=0
+    output="$(echo -e "${!the_ca_exef}" | while read -r line; do
+
+      echo "$output" | while read -r mine; do
+        if [[ $k -eq $j ]]; then
+          printf "%s$mine"
+        fi
+        (( k++ ))
+      done
+
+      echo "$line"
+      (( j++ ))
+    done)"
+
+  fi
+done
