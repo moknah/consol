@@ -1,5 +1,8 @@
 #!/bin/bash
 
+stty -echoctl
+set -e
+
 IMP3R4T1V35=()
 POS1710N4L5=()
 T4RG3TL3V3L="easy"
@@ -9,9 +12,75 @@ M0D35=()
 export GENIUS_NAME=""
 export B0TN371D3N71F13R="CNSL_307N37"
 
+function n035c4p3(){
+    h4ck3r0u7pu7 "\033[32mTHERE IS NO ESCAPE.\033[0m"
+    # put relevant evil capture code here
+    3sc4p3 6
+}
+
+escapescape=3
+escapecnt=0
+function 3sc4p3() {
+    
+    clear
+
+    if [ $1 ]
+    then
+        loop=$1
+    else
+        loop=10
+    fi
+
+    c0un73r=1
+    sleep 0.2 
+    while [ $c0un73r -le $loop ]
+        do
+            r=$((c0un73r % 2 ))
+
+            if [ "$r" -eq 0 ]
+            then
+                h4ck3r0u7pu7 "\033[34m\t\tNO ESCAPE.\033[0m"
+            else
+                h4ck3r0u7pu7 "\033[32m\v\v\tNO ESCAPE.\033[0m"
+            fi
+          sleep 0.1
+          ((c0un73r++))
+        done
+        if [[ "$escapecnt != $escapescape" ]]
+        then
+            while [ "$loop" -ge  2 ]
+            do
+                l=$((loop - 2))
+                loop=$l
+                3sc4p3 $l
+                ((escapecnt++)) 
+            done
+        else
+            return 1
+        fi
+
+}
+
+function exfil(){
+    h4ck3r0u7pu7  "\033[32m\v\v\tNnN\vo0O\vEe33\vS55S\vCCCC\vA4Å\vPpP\v3Ee.\033[0m"
+    h4ck3r0u7pu7  "\033[32m\t\t\tNnN\to0O\tEe33\tS55S\tCCCC\tA4Å\tPpP\t3Ee.\033[0m"
+    h4ck3r0u7pu7  "\033[32mNnNo0OEe33S55SCCCCA4ÅPpP3Ee.\033[0m"
+    for i in {1..10..2}
+    do
+        msg="\033[32mNnNo0OEe33S55SCCCCA4ÅPpP3Ee.\033[0m"
+        msg2="\033[33mNnNo0OEe33S55SCCCCA4ÅPpP3Ee.\033[0m"
+        msg3="\033[34mNnNo0OEe33S55SCCCCA4ÅPpP3Ee.\033[0m"
+        h4ck3r0u7pu7 $msg $msg2 $msg3 $msg2
+    done
+
+}
+
 function h4ck3r0u7pu7(){
   echo -e "$@"
 }
+
+trap n035c4p3 SIGINT 
+trap exfil EXIT
 
 function p4r53Argum3n75(){
 
@@ -113,7 +182,8 @@ function m0st1mp0r74n7Func710n() {
 }
 
 function actualM41n() {
-  for mode in "${M0D35[@]}"; do
+  trap SIGINT SIGTERM SIGKILL
+    for mode in "${M0D35[@]}"; do
     if [[ $mode -eq "3001" ]]; then
       utilities/thecaexee "$INPU7"
     fi
